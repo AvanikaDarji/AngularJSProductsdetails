@@ -1,0 +1,46 @@
+<div class="page-header">
+    <h1>Add A User</h1>
+
+    <head>
+        <style>
+            .help-block {
+                color: red;
+            }
+            
+            body {
+                background-color: lightblue;
+            }
+            
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+
+
+</div>
+<form name="userForm">
+
+    <div class="form-group">
+        <label for="usr"> User Name:</label>
+        <input type="text" ng-model="user.name" name="userName" class="form-control" ng-maxlength="20" ng-pattern="/^[a-zA-Z0-9]*$/" required>
+        <p ng-show="userForm.userName.$dirty && userForm.userName.$error.required" class="help-block">Username is required</p>
+        <div class="error" ng-show="userForm.userName.$error.pattern">
+            Not valid $,%,#,@, should be Alphanumeric</div>
+
+
+        <label for="usr"> Age:</label>
+        <input type="number" ng-model="user.age" class="form-control" name="age" required>
+        <div class="error" ng-show="userForm.age.$error.pattern">
+            The number must be between 1-100</div>
+
+
+        <label for="usr"> Email:</label>
+        <input type="email" class="form-control" ng-model="user.email" required><br>
+
+
+        <button class="btn btn-danger" ng-click=" addUsers();">Add User</button>
+
+    </div>
+
+</form>

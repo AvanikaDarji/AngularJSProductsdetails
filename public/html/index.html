@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+    <script type="application/javascript" src="/lib/jquery.min.js">
+    </script>
+    <script type="application/javascript" src="/lib/bootstrap/js/bootstrap.js">
+    </script>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css">
+    <script type="application/javascript" src="/lib/angular/angular.min.js">
+    </script>
+    <script type="application/javascript" src="/lib/angular/angular-route.min.js">
+    </script>
+    <script type="application/javascript" src="/js/app.js">
+    </script>
+</head>
+
+<body ng-app="myApp">
+
+    <div id="msg"></div>
+    <a href="#/users/list">List Users</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#/users/add">Add Users</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div ng-view></div>
+</body>
+
+</html>
